@@ -1,7 +1,11 @@
-export const ShowBucketList = () => {
+// som en mall som visar hur vår lista/objekt ska visas upp
+
+interface IShowBucketListProps {}
+
+export const ShowBucketList = (props: IShowBucketListProps) => {
     return (
         <>  
-        <h1>BUCKET LIST</h1>
+        <h1>My awesome bucket list</h1>
         </>
     );
 };
