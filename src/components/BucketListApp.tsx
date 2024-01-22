@@ -1,9 +1,9 @@
 import { ShowBucketList } from "./ShowBucketList";
 
 export const BucketListApp = () => {
-    return (
-        <> 
-        <ShowBucketList />
-        </>
-    );
+  return (
+    <>
+      <ShowBucketList />
+    </>
+  );
 };
