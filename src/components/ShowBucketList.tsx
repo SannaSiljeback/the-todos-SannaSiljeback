@@ -23,4 +23,5 @@ export const ShowBucketList = (props: IShowBucketListProps) => {
   );
 };
 
-// behöver en onClick på knappen, behövs en anonym funktion då? pga parameter?, isf skriva bucketList.id i parametern sen
+// behöver en onClick på ta bort knappen, behövs en anonym funktion då? pga parameter?, isf skriva bucketList.id i parametern sen
+// behöver onChange på lägg till knappen?

@@ -1,4 +1,4 @@
-// grunden för vår app, där funktionaliteten ligger, som en längning av App
+// grunden för vår app, där funktionaliteten ligger, som en förlängning av App
 
 import { useState } from "react";
 import { ShowBucketList } from "./ShowBucketList";
