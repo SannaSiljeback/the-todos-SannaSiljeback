@@ -12,6 +12,12 @@ export const BucketListApp = () => {
     new BucketList(4, "Äta mexikansk tacos", "Mexico", false),
     new BucketList(5, "Åka tåg mellan Kandy och Ella", "Sri Lanka", true),
   ]);
+  
+// funktion för att ta bort ett helt objekt ur listan
+// const removeBucketList = (id: number) => {
+//     setBucketLists(bucketLists.filter((bucketList) => bucketList.id !== id));
+// };
+
 
   return (
     <>

@@ -8,3 +8,5 @@ export class BucketList {
     public isDone: boolean
     ) {}
 }
+
+// behövs boolean om jag ej ska använda att den redan är checkad?

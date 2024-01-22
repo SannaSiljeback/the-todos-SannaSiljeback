@@ -9,14 +9,18 @@ interface IShowBucketListProps {
 export const ShowBucketList = (props: IShowBucketListProps) => {
   return (
     <>
-      <h1>My awesome bucket list</h1>
+      <h1>My Awesome Bucket List</h1>
+      <input type="text" />
+      <button>Lägg till</button>
       {props.bucketList.map((bucketList) => (
-        <ul key={bucketList.id}>
-          <li>
-            {bucketList.name}, {bucketList.place}
-          </li>
-        </ul>
+        <div key={bucketList.id}>
+         <input type="checkbox"/>
+         <span> {bucketList.name}, {bucketList.place} </span>
+         <button >Ta bort</button> 
+        </div>
       ))}
     </>
   );
 };
+
+// behöver en onClick på knappen, behövs en anonym funktion då? pga parameter?, isf skriva bucketList.id i parametern sen
