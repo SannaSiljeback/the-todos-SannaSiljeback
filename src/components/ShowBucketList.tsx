@@ -3,22 +3,21 @@
 import { BucketList } from "../models/BucketList";
 
 interface IShowBucketListProps {
-  bucketList: BucketList[];
-  removeBucketList: (id: number) => void;
+  iBucketList: BucketList[];
+  iRemoveBucketList: (id: number) => void;
 }
 
 export const ShowBucketList = (props: IShowBucketListProps) => {
   return (
     <>
-      <h1>My Awesome Bucket List</h1>
 
-      {props.bucketList.map((bucketList) => (
+      {props.iBucketList.map((bucketList) => (
         <div key={bucketList.id}>
           <input type="checkbox" />
           <span>
             {bucketList.name}, {bucketList.place}
           </span>
-          <button onClick={() => props.removeBucketList(bucketList.id)}>Ta bort</button>
+          <button onClick={() => props.iRemoveBucketList(bucketList.id)}>Ta bort</button>
         </div>
       ))}
     </>

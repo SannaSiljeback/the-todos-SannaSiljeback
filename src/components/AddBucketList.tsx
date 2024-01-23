@@ -1,20 +1,31 @@
 import { ChangeEvent, useState } from "react";
 
 interface IAddBucketListProps {
-    addBucketList: (newBucketList: string) => void;
+    iAddBucketList: (newBucketListName: string, newBucketListPlace: string) => void;
 };
 
 export const AddBucketList = (props: IAddBucketListProps) => {
-    const [newBucketList, setNewBucketList] = useState("");
+    const [newBucketListName, setNewBucketListName] = useState("");
 
-    const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
-        setNewBucketList(event.target.value);
+    const [newBucketListPlace, setNewBucketListPlace] = useState("");
+
+    const handleNameChange = (e:ChangeEvent<HTMLInputElement>) => {
+        // setNewBucketListName("");
+        setNewBucketListName(e.target.value);
     };
+
+    const handlePlaceChange = (e:ChangeEvent<HTMLInputElement>) => {
+        // setNewBucketListPlace("");
+        setNewBucketListPlace(e.target.value);
+    };
+
+    //bara en handlechange, lägga ihop dom
 
     return (
         <>
-        <input type="text" onChange={handleChange} value={newBucketList} />
-        <button onClick={() => props.addBucketList(newBucketList)}>Lägg till</button>
+        <input type="text" placeholder="Vad vill du göra?" onChange={handleNameChange} value={newBucketListName} />
+        <input type="text" placeholder="Vart behöver du åka?" onChange={handlePlaceChange} value={newBucketListPlace} />
+        <button onClick={() => props.iAddBucketList(newBucketListName, newBucketListPlace)}>Lägg till</button>
         </>
     );
 };
