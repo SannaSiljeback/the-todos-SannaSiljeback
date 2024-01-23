@@ -17,9 +17,10 @@ export const BucketListApp = () => {
   // funktion för att ta bort ett helt objekt ur listan
   const removeBucketListFunction = (id: number) => {
       setBucketLists(bucketLists.filter((bucketList) => bucketList.id !== id));
+      
   };
 
-  // funktion för att lägga till ett helt objekt i listan, hur göra för att få att id anpassas?
+  // funktion för att lägga till ett helt objekt i listan
   const addBucketListFunction = (newBucketListName: string, newBucketListPlace: string) => {
     setBucketLists([...bucketLists, new BucketList(bucketLists.length +1, newBucketListName, newBucketListPlace, false)]);
   };
