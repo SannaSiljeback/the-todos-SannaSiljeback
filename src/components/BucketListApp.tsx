@@ -23,6 +23,24 @@ export const BucketListApp = () => {
   // funktion för att lägga till ett helt objekt i listan
   const addBucketListFunction = (newBucketListName: string, newBucketListPlace: string) => {
     setBucketLists([...bucketLists, new BucketList(bucketLists.length +1, newBucketListName, newBucketListPlace, false)]);
+
+    //state för local storage:
+    // const [bucketListsStorage, setBucketListsStorage] = useState(JSON.parse(localStorage.getItem("bucketLists") || "[]"));
+
+
+    //localStorage här? vill ju spara värdet från våra inputs? spara ner i localstorage, syntax:
+    localStorage.setItem("listStorage", JSON.stringify(bucketLists));
+    // vill vi spara ner input.value här ist för bucketLists?
+
+    // hämta information från localstorage, syntax:
+    // localStorage.getItem(key:string): string;
+    // const listStorage = localStorage.getItem("bucketLists");
+    // const listStorageAsObject = JSON.parse(listStorage);
+
+    // går göra på en rad: sätts i use statet då
+    // JSON.parse(localStorage.getItem("bucketLists") || "[]")
+    // skippa [] och ersätta medsin hårdkodade lista?
+
   };
 
   return (
@@ -31,6 +49,10 @@ export const BucketListApp = () => {
 
       <AddBucketList iAddBucketList={addBucketListFunction}/>
       <ShowBucketList iBucketList={bucketLists} iRemoveBucketList={removeBucketListFunction}/>
+
+  
     </>
   );
 };
+
+// inuti en tagg som vi vill visa upp med: {bucketListStorage[0].name}
