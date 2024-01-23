@@ -18,9 +18,15 @@ export const BucketListApp = () => {
       setBucketLists(bucketLists.filter((bucketList) => bucketList.id !== id));
   };
 
+  // funktion för att lägga till ett helt objekt i listan
+  const addBucketList = (newBucketList: string) => {
+    setBucketLists([...bucketLists, new BucketList(6, newBucketList, "Sverige", false)]);
+  };
+
   return (
     <>
       <ShowBucketList bucketList={bucketLists} removeBucketList={removeBucketList}/>
+      
     </>
   );
 };
