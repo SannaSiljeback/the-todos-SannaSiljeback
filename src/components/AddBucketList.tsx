@@ -25,12 +25,22 @@ export const AddBucketList = (props: IAddBucketListProps) => {
 
     //bara en handlechange, lägga ihop dom? den över går ej, hur?
 
+
+    //funktion med ifsats för att inte kunna lägga till tomma inputs, även för att nollställa inputs efteråt
+    const handleClick = () => {
+        if (newBucketListName.trim() !== "" || newBucketListPlace.trim() !== "") {
+            props.iAddBucketList(newBucketListName, newBucketListPlace)
+            setNewBucketListName("");
+            setNewBucketListPlace("");
+        }
+    };
+
+
     return (
         <>
         <input type="text" placeholder="Vad vill du göra?" onChange={handleNameChange} value={newBucketListName}/>
         <input type="text" placeholder="Vart behöver du åka?" onChange={handlePlaceChange} value={newBucketListPlace}/>
-        <button onClick={() => props.iAddBucketList(newBucketListName, newBucketListPlace)}>Lägg till</button>
-
+        <button onClick={handleClick}>Lägg till</button>
         </>
     );
 };
