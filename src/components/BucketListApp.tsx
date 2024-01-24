@@ -33,8 +33,8 @@ export const BucketListApp = () => {
     setBucketLists(bucketLists.filter((bucketList) => bucketList.id !== id));
 
 
-    // radera objekt frånlocalstorage listan:
-    // const = bucketLists.filter((bucketList) => bucketList.id !== id);
+    // radera objekt frånlocalstorage listan: filter?
+    // bucketLists.filter((bucketList) => bucketList.id !== id);
 
     localStorage.setItem("listStorage",JSON.stringify(bucketLists.filter((bucketList) => bucketList.id !== id)));
 
