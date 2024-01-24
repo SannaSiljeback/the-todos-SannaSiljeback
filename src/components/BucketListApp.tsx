@@ -41,10 +41,22 @@ export const BucketListApp = () => {
     
   };
 
-
+  // funktion för local storage och slippa skriva setItem i varje funktion??
   // const localStorageFunction = () => {
     
   // };
+
+
+  const checkboxFunction = (id: string) => {
+    setBucketLists(prevBucketLists => {
+        const updatedBucketLists = prevBucketLists.map(bucketlist =>
+        bucketlist.id === id ? {...bucketlist, isDone: !bucketlist.isDone} : bucketlist
+        );
+
+        localStorage.setItem("listStorage",JSON.stringify(updatedBucketLists));
+        return updatedBucketLists;
+        });  
+  };
 
   
 
@@ -56,6 +68,7 @@ export const BucketListApp = () => {
       <ShowBucketList
         iBucketList={bucketLists}
         iRemoveBucketList={removeBucketListFunction}
+        iBucketListCheckbox={checkboxFunction}
       />
     </>
   );
