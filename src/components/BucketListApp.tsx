@@ -46,6 +46,10 @@ export const BucketListApp = () => {
     
   // };
 
+  const checkboxFunction = (id: string) => {
+    setBucketLists(prevBucketLists => prevBucketLists.map(bucketlist => bucketlist.id === id ? {...bucketlist, isDone: !bucketlist.isDone} : bucketlist));
+  };
+
   
 
   return (
@@ -56,6 +60,7 @@ export const BucketListApp = () => {
       <ShowBucketList
         iBucketList={bucketLists}
         iRemoveBucketList={removeBucketListFunction}
+        iBucketListCheckbox={checkboxFunction}
       />
     </>
   );
