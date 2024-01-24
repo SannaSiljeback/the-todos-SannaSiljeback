@@ -4,7 +4,7 @@ import { BucketList } from "../models/BucketList";
 
 interface IShowBucketListProps {
   iBucketList: BucketList[];
-  iRemoveBucketList: (id: number) => void;
+  iRemoveBucketList: (id: string) => void;
 }
 
 export const ShowBucketList = (props: IShowBucketListProps) => {
