@@ -38,8 +38,8 @@ export const AddBucketList = (props: IAddBucketListProps) => {
 
     return (
         <>
-        <input type="text" placeholder="Vad vill du göra?" onChange={handleNameChange} value={newBucketListName}/>
-        <input type="text" placeholder="Vart behöver du åka?" onChange={handlePlaceChange} value={newBucketListPlace}/>
+        <input type="text" placeholder="What to do want to do?" onChange={handleNameChange} value={newBucketListName}/>
+        <input type="text" placeholder="Where do you need to go?" onChange={handlePlaceChange} value={newBucketListPlace}/>
         <button onClick={handleClick}>Lägg till</button>
         </>
     );
