@@ -7,10 +7,6 @@ import { AddBucketList } from "./AddBucketList";
 import { v4 as uuidv4 } from 'uuid';
 
 export const BucketListApp = () => {
-  // hämta information från localstorage, syntax:
-  // localStorage.getItem(key:string): string;
-  // const listStorage = localStorage.getItem("bucketLists");
-  // const listStorageAsObject = JSON.parse(listStorage);
   const hardCodedValues = [
     new BucketList(uuidv4(), "Hoppa fallskärm", "Australien", true),
     new BucketList(uuidv4(), "Besöka Machu Picchu", "Peru", false),
@@ -21,8 +17,6 @@ export const BucketListApp = () => {
 
   // går göra på en rad: sätts i use statet då
   //state för local storage:
-  // const [bucketListsStorage, setBucketListsStorage] = useState(JSON.parse(localStorage.getItem("bucketLists") || "[]"));
-  // skippa [] och ersätta medsin hårdkodade lista? blir konstigt när man uppdaterar
 
   const [bucketLists, setBucketLists] = useState<BucketList[]>(
     JSON.parse(localStorage.getItem("listStorage") || JSON.stringify(hardCodedValues)));
@@ -31,10 +25,6 @@ export const BucketListApp = () => {
   // funktion för att ta bort ett helt objekt ur listan
   const removeBucketListFunction = (id: string) => {
     setBucketLists(bucketLists.filter((bucketList) => bucketList.id !== id));
-
-
-    // radera objekt frånlocalstorage listan: filter?
-    // bucketLists.filter((bucketList) => bucketList.id !== id);
 
     localStorage.setItem("listStorage",JSON.stringify(bucketLists.filter((bucketList) => bucketList.id !== id)));
 
@@ -47,8 +37,6 @@ export const BucketListApp = () => {
 
     setBucketLists([...bucketLists, new BucketList(newId, newBucketListName, newBucketListPlace, false)]);
 
-  
-    //localStorage här? spara ner i localstorage, syntax:
     localStorage.setItem("listStorage",JSON.stringify([...bucketLists, new BucketList(newId, newBucketListName, newBucketListPlace, false)]));
     
   };
@@ -72,5 +60,3 @@ export const BucketListApp = () => {
     </>
   );
 };
-
-// inuti en tagg som vi vill visa upp med: {bucketListStorage[0].name}
