@@ -32,21 +32,32 @@ export const BucketListApp = () => {
   const removeBucketListFunction = (id: string) => {
     setBucketLists(bucketLists.filter((bucketList) => bucketList.id !== id));
 
+
+    // radera objekt frånlocalstorage listan:
+    // const = bucketLists.filter((bucketList) => bucketList.id !== id);
+
+    localStorage.setItem("listStorage",JSON.stringify(bucketLists.filter((bucketList) => bucketList.id !== id)));
+
   };
 
 
   // funktion för att lägga till ett helt objekt i listan
   const addBucketListFunction = (newBucketListName: string, newBucketListPlace: string) => {
     const newId= uuidv4();
-    setBucketLists([...bucketLists, new BucketList(newId, newBucketListName, newBucketListPlace, false)]);
 
-    console.log(bucketLists);
+    setBucketLists([...bucketLists, new BucketList(newId, newBucketListName, newBucketListPlace, false)]);
 
   
     //localStorage här? spara ner i localstorage, syntax:
     localStorage.setItem("listStorage",JSON.stringify([...bucketLists, new BucketList(newId, newBucketListName, newBucketListPlace, false)]));
-   
+    
   };
+
+
+  // const localStorageFunction = () => {
+    
+  // };
+
   
 
   return (
