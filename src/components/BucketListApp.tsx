@@ -58,7 +58,13 @@ export const BucketListApp = () => {
         });  
   };
 
-  
+  const handleSort = () => {
+    setBucketLists([...bucketLists].sort((a, b) => a.place.localeCompare(b.place)));
+
+    localStorage.setItem("listStorage",JSON.stringify([...bucketLists].sort((a, b) => a.place.localeCompare(b.place))));
+    
+  };
+
 
   return (
     <>
@@ -70,6 +76,8 @@ export const BucketListApp = () => {
         iRemoveBucketList={removeBucketListFunction}
         iBucketListCheckbox={checkboxFunction}
       />
+
+      <button onClick={handleSort}>Sortera listan</button>
     </>
   );
 };
