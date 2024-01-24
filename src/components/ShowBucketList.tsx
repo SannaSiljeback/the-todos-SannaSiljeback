@@ -1,6 +1,7 @@
 // som en mall som visar hur vår lista/objekt ska visas upp
 
 import { BucketList } from "../models/BucketList";
+import './ShowBucketList.css';
 
 interface IShowBucketListProps {
   iBucketList: BucketList[];
