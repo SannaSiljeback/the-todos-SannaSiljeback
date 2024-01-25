@@ -3,12 +3,16 @@
 import { BucketList } from "../models/BucketList";
 import './ShowBucketList.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 
 interface IShowBucketListProps {
   iBucketList: BucketList[];
   iRemoveBucketList: (id: string) => void;
   iBucketListCheckbox: (id: string) => void;
 }
+
+const trashCanIcon = faTrashAlt;
 
 
 export const ShowBucketList = (props: IShowBucketListProps) => {
@@ -21,7 +25,8 @@ export const ShowBucketList = (props: IShowBucketListProps) => {
           <span className={bucketList.isDone ? "done" : ""}>
             {bucketList.name}, {bucketList.place}
           </span>
-          <button onClick={() => props.iRemoveBucketList(bucketList.id)}>Ta bort</button>
+          <button onClick={() => props.iRemoveBucketList(bucketList.id)}><FontAwesomeIcon icon={trashCanIcon} /></button>
+      
         </div>
       ))}
       </div>

@@ -5,9 +5,14 @@ import { ShowBucketList } from "./ShowBucketList";
 import { BucketList } from "../models/BucketList";
 import { AddBucketList } from "./AddBucketList";
 import { v4 as uuidv4 } from 'uuid';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSortAlphaAsc } from "@fortawesome/free-solid-svg-icons";
 
 export const BucketListApp = () => {
+
+  const sortIcon = faSortAlphaAsc;
+
   const hardCodedValues = [
     new BucketList(uuidv4(), "Hoppa fallskärm", "Australien", true),
     new BucketList(uuidv4(), "Besöka Machu Picchu", "Peru", false),
@@ -69,19 +74,28 @@ export const BucketListApp = () => {
 
   return (
     <>
-    <div className="wholeList">
-      <h1>My Awesome Bucket List</h1>
+      <div className="container">
+       <div className="row">
+          <div className="col header">
+            <h1>My Awesome Bucket List</h1>
+          </div>
+       </div>
 
-      <AddBucketList iAddBucketList={addBucketListFunction} />
-      <ShowBucketList
-        iBucketList={bucketLists}
-        iRemoveBucketList={removeBucketListFunction}
-        iBucketListCheckbox={checkboxFunction}
-      />
-
-      <button onClick={handleSort}>Sortera listan</button>
-    
-    </div>
+        <div className="row">
+          <div className="col">
+            <AddBucketList iAddBucketList={addBucketListFunction} />
+          </div>
+          <div className="col">
+             <ShowBucketList
+                iBucketList={bucketLists}
+                iRemoveBucketList={removeBucketListFunction}
+               iBucketListCheckbox={checkboxFunction}
+              />
+            <button onClick={handleSort}><FontAwesomeIcon icon={sortIcon} /></button>
+          </div>
+        </div>
+      </div>
+   
     </>
   );
 };

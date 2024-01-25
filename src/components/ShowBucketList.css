@@ -2,10 +2,20 @@
     text-decoration: line-through;
 }
 
-:root {
-    --color-blue: 
-    
+#root {
+    /* --color-blue:; */
+
 }
+
+.container {
+    min-height: 80vh;
+    min-width: 70vw;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
 
 body {
     background-image: url(../img/palm3.png);
@@ -13,6 +23,8 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+
+
 }
 
 .wholeList {
