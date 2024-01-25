@@ -5,6 +5,7 @@ import { ShowBucketList } from "./ShowBucketList";
 import { BucketList } from "../models/BucketList";
 import { AddBucketList } from "./AddBucketList";
 import { v4 as uuidv4 } from 'uuid';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const BucketListApp = () => {
   const hardCodedValues = [
@@ -68,6 +69,7 @@ export const BucketListApp = () => {
 
   return (
     <>
+    <div className="wholeList">
       <h1>My Awesome Bucket List</h1>
 
       <AddBucketList iAddBucketList={addBucketListFunction} />
@@ -78,6 +80,8 @@ export const BucketListApp = () => {
       />
 
       <button onClick={handleSort}>Sortera listan</button>
+    
+    </div>
     </>
   );
 };
