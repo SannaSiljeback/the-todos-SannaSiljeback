@@ -12,10 +12,10 @@ interface IShowBucketListProps {
   iBucketListCheckbox: (id: string) => void;
 }
 
-const trashCanIcon = faTrashAlt;
-
 
 export const ShowBucketList = (props: IShowBucketListProps) => {
+  const trashCanIcon = faTrashAlt;
+
   return (
     <>
     <div className="listItems">
