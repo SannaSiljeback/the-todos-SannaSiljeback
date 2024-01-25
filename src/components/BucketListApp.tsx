@@ -68,6 +68,7 @@ export const BucketListApp = () => {
 
   return (
     <>
+    <div className="wholeList">
       <h1>My Awesome Bucket List</h1>
 
       <AddBucketList iAddBucketList={addBucketListFunction} />
@@ -78,6 +79,7 @@ export const BucketListApp = () => {
       />
 
       <button onClick={handleSort}>Sortera listan</button>
+    </div>
     </>
   );
 };

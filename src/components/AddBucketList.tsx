@@ -38,9 +38,11 @@ export const AddBucketList = (props: IAddBucketListProps) => {
 
     return (
         <>
+        <form>
         <input type="text" placeholder="What to do want to do?" onChange={handleNameChange} value={newBucketListName}/>
         <input type="text" placeholder="Where do you need to go?" onChange={handlePlaceChange} value={newBucketListPlace}/>
         <button onClick={handleClick}>Lägg till</button>
+        </form>
         </>
     );
 };

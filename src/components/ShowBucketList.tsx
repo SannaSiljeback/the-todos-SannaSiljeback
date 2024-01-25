@@ -13,7 +13,7 @@ interface IShowBucketListProps {
 export const ShowBucketList = (props: IShowBucketListProps) => {
   return (
     <>
-
+    <div className="listItems">
       {props.iBucketList.map((bucketList) => (
         <div key={bucketList.id}>
           <input type="checkbox" checked={bucketList.isDone} onChange={() => props.iBucketListCheckbox(bucketList.id)}/>
@@ -23,6 +23,7 @@ export const ShowBucketList = (props: IShowBucketListProps) => {
           <button onClick={() => props.iRemoveBucketList(bucketList.id)}>Ta bort</button>
         </div>
       ))}
+      </div>
     </>
   );
 };

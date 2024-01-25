@@ -1,3 +1,17 @@
 .done {
     text-decoration: line-through;
 }
+
+:root {
+    --color-blue: 
+    
+}
+
+body {
+    background-image: url(../img/vattenfall-himmel3.jpg);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    
+}
+
