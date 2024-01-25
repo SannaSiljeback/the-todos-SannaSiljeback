@@ -2,6 +2,7 @@
 
 import { BucketList } from "../models/BucketList";
 import './ShowBucketList.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface IShowBucketListProps {
   iBucketList: BucketList[];

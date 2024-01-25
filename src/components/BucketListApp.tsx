@@ -5,6 +5,7 @@ import { ShowBucketList } from "./ShowBucketList";
 import { BucketList } from "../models/BucketList";
 import { AddBucketList } from "./AddBucketList";
 import { v4 as uuidv4 } from 'uuid';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const BucketListApp = () => {
   const hardCodedValues = [
