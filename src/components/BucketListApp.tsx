@@ -60,7 +60,7 @@ export const BucketListApp = () => {
             <div className="col">
               <AddBucketList iAddBucketList={addBucketListFunction} />
             </div>
-            <div className="col">
+            <div className="col fix">
                <div className="row">
                   <ShowBucketList
                      iBucketList={bucketLists}
