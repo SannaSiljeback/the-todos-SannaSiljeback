@@ -1,16 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
+:root {
+    --color-green-lightest: #A1A37B;
+    --color-green-light: #8D9064;
+    --color-green-middle: #65653E;
+    --color-green-dark: #3C3C2A;
+    --color-green-darker: #242419;
+    --color-green-darkest: #181811;
+}
+
+#root {
+    margin: 0 auto;
+    padding: 2rem;
+}
+
 body {
     background-image: url(../img/palm3.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
-
-/* #root {
-    --color-blue:;
-
-} */
 
 .container {
     min-height: 80vh;
@@ -24,13 +33,12 @@ body {
 
 .header {
     margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
  margin-top: auto;
- 
- /* text-shadow: 3px 3px 4px rgba(0,0,0,0.3); */
- 
  text-shadow: 1px 2px 3px rgba(0,0,0,0.4),
  0px 8px 43px rgba(0,0,0,0.1),
  0px 18px 53px rgba(0,0,0,0.1);
@@ -39,38 +47,40 @@ h1 {
 
 .addInput {
     height: 45px;
-    background-color: #B1B181;
-    border-color: #B1B181;
+    background-color: var(--color-green-light);
     border-radius: 10px;
-    /* outline: none; */
-    border: 1px solid #65653E;
+    border: 1px solid var(--color-green-middle);
     margin-left: 8px;
     padding: 10px;
-
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
-
     font-size: large;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--color-green-darker);
+}
+
+input::placeholder {
+    color: var(--color-green-dark);
 }
 
 .addBtn {
     margin-left: 20px;
-    background-color: #B1B181;
-    border: 1px solid #65653E;
+    background-color: var(--color-green-light);
+    border: 1px solid var(--color-green-middle);
     border-radius: 10px;
     margin-right: 40px;
-
+    color: var(--color-green-darkest);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 
 .itemList {
     margin-left: 130px;
-    background-color: #B1B181;
+    background-color: var(--color-green-light);
     padding: 17px;
     border-radius: 10px;
-    border: 1px solid #65653E   ;
-
+    border: 1px solid var(--color-green-middle);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
-
     font-size: large;
 }
 
@@ -82,11 +92,10 @@ h1 {
 }
 
 .deleteBtn {
-
-    background-color: #B1B181;
-    border: 1px solid #65653E;
+    background-color: var(--color-green-lightest);
+    border: 1px solid var(--color-green-middle);
     border-radius: 10px;
-    
+    color: var(--color-green-darkest);
 }
 
 .sortDiv {
@@ -97,15 +106,16 @@ h1 {
 }
 
 .sortBtn {
-    width: 73px;
+    width: 80px;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #B1B181;
-    border: 1px solid #65653E;
+    background-color: var(--color-green-lightest);
+    border: 1px solid var(--color-green-middle);
     border-radius: 40px;
-
+    margin-right: 7px;
+    color: var(--color-green-darkest);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 
