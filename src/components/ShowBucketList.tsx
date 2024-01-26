@@ -21,7 +21,7 @@ export const ShowBucketList = (props: IShowBucketListProps) => {
     <div className="itemList">
       {props.iBucketList.map((bucketList) => (
         <div className="listDiv" key={bucketList.id}>
-          <input type="checkbox" checked={bucketList.isDone} onChange={() => props.iBucketListCheckbox(bucketList.id)}/>
+          <input className="checkedInput" type="checkbox" checked={bucketList.isDone} onChange={() => props.iBucketListCheckbox(bucketList.id)}/>
           <span className={bucketList.isDone ? "done" : ""}>
             {bucketList.name}, {bucketList.place}
           </span>
