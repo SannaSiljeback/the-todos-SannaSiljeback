@@ -11,7 +11,7 @@
 
 #root {
     margin: 0 auto;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
 body {
@@ -19,11 +19,11 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .container {
     min-height: 80vh;
-    min-width: 80vw;
     font-family: 'Kalam', cursive;
 }
 
@@ -45,11 +45,15 @@ h1 {
 
 }
 
+.form {
+    display: flex;
+}
+
 .addInput {
-    height: 45px;
+    height: 48px;
     background-color: var(--color-green-light);
     border-radius: 10px;
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     margin-left: 8px;
     padding: 10px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
@@ -64,24 +68,31 @@ input::placeholder {
     color: var(--color-green-dark);
 }
 
+button.btn::hover {
+    background-color: red !important;
+}
+
 .addBtn {
-    margin-left: 20px;
+    margin-left: 10px;
     background-color: var(--color-green-light);
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     border-radius: 10px;
     margin-right: 40px;
     color: var(--color-green-darkest);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+
+    display: flex;
+    align-items: center;
 }
 
 .itemList {
-    margin-left: 130px;
     background-color: var(--color-green-light);
     padding: 17px;
     border-radius: 10px;
-    border: 1px solid var(--color-green-middle);
+    border: 5px solid var(--color-green-middle);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
     font-size: large;
+    min-width: 500px;
 }
 
 .listDiv {
@@ -93,29 +104,84 @@ input::placeholder {
 
 .deleteBtn {
     background-color: var(--color-green-lightest);
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     border-radius: 10px;
     color: var(--color-green-darkest);
+
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
 
 .sortDiv {
     display: flex;
     justify-content: end;
-    margin-top: 10px;
-    margin-left: 130px;
+    padding-top: 10px;
+    margin-left: 15px;
 }
 
+
 .sortBtn {
-    width: 80px;
-    height: 45px;
+    width: 90px;
+    height: 47px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-green-lightest);
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     border-radius: 40px;
     margin-right: 7px;
     color: var(--color-green-darkest);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 
+/* desktop on bootstrap */
+@media screen and (max-width: 1200px) {
+  
+   
+  
+  }
+
+  
+  @media screen and (max-width: 992px) {
+
+    .header {
+        font-size: 1.2rem;
+        margin-bottom: 75px;
+       }
+  
+    .form {
+        margin-bottom: 40px;
+        justify-content: space-between;
+       }
+    
+    .addInput {
+        width: 300px;
+        margin-left: 0;
+       }
+       
+    .addBtn {
+        margin-right: 10px;
+       }
+   
+  }
+  @media screen and (max-width: 768px ) {
+    
+   .header {
+    font-size: 0.9rem;
+    margin-bottom: 55px;
+   }
+
+   .form {
+    margin-bottom: 40px;
+   }
+
+   .addInput {
+    margin-left: 1px;
+   }
+   
+   .addBtn {
+    margin-left: 1px;
+   }
+  
+  }

@@ -30,11 +30,13 @@ export const AddBucketList = (props: IAddBucketListProps) => {
 
     return (
         <>
-        <form>
-        <input className="addInput" type="text" placeholder="What to do want to do?" onChange={handleNameChange} value={newBucketListName}/>
-        <input className="addInput" type="text" placeholder="Where do you need to go?" onChange={handlePlaceChange} value={newBucketListPlace}/>
-        <button className="addBtn" onClick={handleClick}><FontAwesomeIcon icon={addIcon} /></button>
+        <div className="row">
+           <form className="form">
+           <input className="addInput" type="text" placeholder="What to do want to do?" onChange={handleNameChange} value={newBucketListName}/>
+           <input className="addInput" type="text" placeholder="Where do you need to go?" onChange={handlePlaceChange} value={newBucketListPlace}/>
+           <button className="addBtn" onClick={handleClick}><FontAwesomeIcon icon={addIcon} /></button>
         </form>
+        </div>
         </>
     );
 };
