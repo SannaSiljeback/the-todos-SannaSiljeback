@@ -18,14 +18,14 @@ export const ShowBucketList = (props: IShowBucketListProps) => {
 
   return (
     <>
-    <div className="listItems">
+    <div className="itemList">
       {props.iBucketList.map((bucketList) => (
-        <div key={bucketList.id}>
+        <div className="listDiv" key={bucketList.id}>
           <input type="checkbox" checked={bucketList.isDone} onChange={() => props.iBucketListCheckbox(bucketList.id)}/>
           <span className={bucketList.isDone ? "done" : ""}>
             {bucketList.name}, {bucketList.place}
           </span>
-          <button onClick={() => props.iRemoveBucketList(bucketList.id)}><FontAwesomeIcon icon={trashCanIcon} /></button>
+          <button className="deleteBtn" onClick={() => props.iRemoveBucketList(bucketList.id)}><FontAwesomeIcon icon={trashCanIcon} /></button>
       
         </div>
       ))}

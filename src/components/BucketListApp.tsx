@@ -85,13 +85,16 @@ export const BucketListApp = () => {
           <div className="col">
             <AddBucketList iAddBucketList={addBucketListFunction} />
           </div>
-          <div className="col">
+          <div className="col ">
              <ShowBucketList
                 iBucketList={bucketLists}
                 iRemoveBucketList={removeBucketListFunction}
                iBucketListCheckbox={checkboxFunction}
               />
-            <button onClick={handleSort}><FontAwesomeIcon icon={sortIcon} /></button>
+            <div className="sortDiv">
+              <button className="sortBtn" onClick={handleSort}><FontAwesomeIcon icon={sortIcon} /></button>
+            </div>
+            
           </div>
         </div>
       </div>
