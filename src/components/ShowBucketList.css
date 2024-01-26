@@ -9,6 +9,7 @@ body {
 
 /* #root {
     --color-blue:;
+    #B1B181; första gröna
 
 } */
 
@@ -47,7 +48,7 @@ h1 {
 
 .addInput {
     height: 45px;
-    background-color: #B1B181;
+    background-color: #8D9064;
     border-color: #B1B181;
     border-radius: 10px;
     /* outline: none; */
@@ -62,7 +63,7 @@ h1 {
 
 .addBtn {
     margin-left: 20px;
-    background-color: #B1B181;
+    background-color: #8D9064;
     border: 1px solid #65653E;
     border-radius: 10px;
     margin-right: 40px;
@@ -72,7 +73,7 @@ h1 {
 
 .itemList {
     margin-left: 130px;
-    background-color: #B1B181;
+    background-color: #8D9064;
     padding: 17px;
     border-radius: 10px;
     border: 1px solid #65653E   ;
@@ -91,7 +92,7 @@ h1 {
 
 .deleteBtn {
 
-    background-color: #B1B181;
+    background-color: #A1A37B;
     border: 1px solid #65653E;
     border-radius: 10px;
     
@@ -105,14 +106,15 @@ h1 {
 }
 
 .sortBtn {
-    width: 73px;
+    width: 80px;
     height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #B1B181;
+    background-color: #A1A37B;
     border: 1px solid #65653E;
     border-radius: 40px;
+    margin-right: 7px;
 
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
