@@ -1,5 +1,3 @@
-// som en mall för hur objeketen ska se ut
-
 export class BucketList {
   constructor(
     public id: string,
@@ -8,5 +6,3 @@ export class BucketList {
     public isDone: boolean
   ) {}
 }
-
-// behövs boolean om jag ej ska använda att den redan är checkad?
