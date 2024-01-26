@@ -11,7 +11,6 @@
 
 #root {
     margin: 0 auto;
-    padding: 2rem;
 }
 
 body {
@@ -19,11 +18,11 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .container {
     min-height: 80vh;
-    min-width: 80vw;
     font-family: 'Kalam', cursive;
 }
 
@@ -35,6 +34,7 @@ body {
     margin-bottom: 100px;
     display: flex;
     justify-content: center;
+    font-size: 1.3rem;
 }
 
 h1 {
@@ -45,11 +45,15 @@ h1 {
 
 }
 
+.form {
+    display: flex;
+}
+
 .addInput {
-    height: 45px;
+    height: 60px;
     background-color: var(--color-green-light);
     border-radius: 10px;
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     margin-left: 8px;
     padding: 10px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
@@ -64,58 +68,144 @@ input::placeholder {
     color: var(--color-green-dark);
 }
 
+button.btn::hover {
+    background-color: red !important;
+}
+
 .addBtn {
-    margin-left: 20px;
+    margin-left: 10px;
     background-color: var(--color-green-light);
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     border-radius: 10px;
     margin-right: 40px;
     color: var(--color-green-darkest);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
+    display: flex;
+    align-items: center;
 }
 
-.itemList {
-    margin-left: 130px;
+.itemDiv {
     background-color: var(--color-green-light);
     padding: 17px;
     border-radius: 10px;
-    border: 1px solid var(--color-green-middle);
+    border: 5px solid var(--color-green-middle);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
     font-size: large;
+    min-width: 500px;
 }
 
-.listDiv {
+.listItems {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-bottom: 10px;
+   margin-bottom: 10px;   
 }
 
 .deleteBtn {
     background-color: var(--color-green-lightest);
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     border-radius: 10px;
     color: var(--color-green-darkest);
+
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
 
 .sortDiv {
     display: flex;
     justify-content: end;
-    margin-top: 10px;
-    margin-left: 130px;
+    padding-top: 10px;
+    margin-left: 15px;
 }
 
 .sortBtn {
-    width: 80px;
-    height: 45px;
+    width: 90px;
+    height: 47px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--color-green-lightest);
-    border: 1px solid var(--color-green-middle);
+    border: 3px solid var(--color-green-middle);
     border-radius: 40px;
     margin-right: 7px;
     color: var(--color-green-darkest);
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07), 0 16px 32px rgba(0,0,0,0.07), 0 32px 64px rgba(0,0,0,0.07);
 }
 
+
+@media screen and (max-width: 1200px) {
+  
+    .header {
+        font-size: 1.2rem;
+        margin-bottom: 75px;
+       }
+  
+    .form {
+        margin-bottom: 40px;
+        display: inline;
+    }
+    
+    .addInput {
+        width: 300px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        
+    }
+       
+    .addBtn {
+        margin-left: 0;
+        width: 80px;
+        justify-content: center;
+        height: 47px;
+    }
+}
+
+  @media screen and (max-width: 992px) {
+
+    .header {
+        font-size: 1.2rem;
+        margin-bottom: 75px;
+       }
+  
+    .form {
+        margin-bottom: 40px;
+        justify-content: space-between;
+        display: flex;
+       }
+    
+    .addInput {
+        width: 300px;
+        margin-left: 0;
+        height: 65px;
+       }
+       
+    .addBtn {
+        margin-right: 2px;
+        width: 69px;
+        height: 65px;
+       }
+  }
+
+  @media screen and (max-width: 768px ) {
+    
+   .header {
+    font-size: 0.9rem;
+    margin-bottom: 55px;
+   }
+
+   .form {
+    margin-bottom: 40px;
+   }
+
+   .addInput {
+    margin-left: 1px;
+    height: 55px;
+   }
+   
+   .addBtn {
+    margin-left: 1px;
+    height: 55px;
+   }
+  
+  }
